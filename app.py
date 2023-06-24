@@ -175,9 +175,7 @@ eventuais d&uacute;vidas sobre o presente contrato de namoro</font></font></p>
 
 </p>
 <p style="margin-top: 0.21cm; margin-bottom: 0.21cm; line-height: 150%">
-<font face="Calibri Light, serif"><font size="3" style="font-size: 13pt">(nome
-da cidade que est&aacute; sendo assinado o contrato), dia, do m&ecirc;s
-de (m&ecirc;s), do ano de (ano)</font></font></p>
+<font face="Calibri Light, serif"><font size="3" style="font-size: 13pt">Porto Alegre, dia 12 de março de 2023</font></font></p>
 <p style="margin-top: 0.21cm; margin-bottom: 0.21cm; line-height: 150%">
 <br/>
 <br/>
