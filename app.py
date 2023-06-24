@@ -7,12 +7,12 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
-        return pdf(request.form["nomea"], request.form["nomeb"], request.form["natua"], request.form["natub"], request.form["profia"], request.form["profib"])
+        return pdf(request.form["nomea"], request.form["nomeb"], request.form["natua"], request.form["natub"], request.form["profia"], request.form["profib"], request.form["identa"], request.form["identb"], request.form["orga"], request.form["orgb"], request.form["dataa"], request.form["datab"], request.form["cpfa"], request.form["cpfb"], request.form["enda"], request.form["endb"], request.form["cidadea"], request.form["cidadeb"], request.form["estadoa"], request.form["estadob"])
     
     return render_template("contract.html")
 
 @app.route("/pdf", methods=["GET"])
-def pdf(nomea, nomeb, natua, natub, profia, profib):
+def pdf(nomea, nomeb, natua, natub, profia, profib, identa, identb, orga, orgb, dataa, datab, cpfa, cpfb, enda, endb, cidadea, cidadeb, estadoa, estadob):
    
     html = """
     
@@ -48,19 +48,15 @@ de ambas as partes:</font></font></p>
 <p style="margin-top: 0.21cm; margin-bottom: 0.21cm; line-height: 150%">
 <font face="Calibri Light, serif"><font size="3" style="font-size: 13pt">A)
 (nome completo a), (naturalidade a), (profissao a), Carteira de
-Identidade (n&uacute;mero), expedida por (&oacute;rg&atilde;o), na
-data de (data de expedi&ccedil;&atilde;o), CPF n&ordm; (n&uacute;mero),
-residente e domiciliado na (rua/avenida/travessa, nome da rua,
-n&uacute;mero, casa/apartamento, complemento), na cidade de (nome da
-cidade), no estado (nome do estado).</font></font></p>
+Identidade (identidade a), expedida por (orgao a), na
+data de (data a), CPF n&ordm; (cpf a),
+residente e domiciliado na (endereco a), na cidade de (cidade a), no estado (estado a).</font></font></p>
 <p style="margin-top: 0.21cm; margin-bottom: 0.21cm; line-height: 150%">
 <font face="Calibri Light, serif"><font size="3" style="font-size: 13pt">B)
 (nome completo b), (naturalidade b), (profissao b), Carteira de
-Identidade (n&uacute;mero), expedida por (&oacute;rg&atilde;o), na
-data de (data de expedi&ccedil;&atilde;o), CPF n&ordm; (n&uacute;mero),
-residente e domiciliado na (rua/avenida/travessa, nome da rua,
-n&uacute;mero, casa/apartamento, complemento), na cidade de (nome da
-cidade), no estado (nome do estado).</font></font></p>
+Identidade (identidate b), expedida por (orgao b), na
+data de (data b), CPF n&ordm; (cpf b),
+residente e domiciliado na (endereco b), na cidade de (cidade b), no estado (estado b).</font></font></p>
 <p style="margin-top: 0.21cm; margin-bottom: 0.21cm; line-height: 150%">
 <br/>
 <br/>
@@ -225,7 +221,7 @@ de (m&ecirc;s), do ano de (ano)</font></font></p>
 </body>
 </html>
     
-    """.replace("(nome completo a)", nomea).replace("(nome completo b)", nomeb).replace("(naturalidade a)", natua).replace("(naturalidade b)", natub).replace("(profissao a)", profia).replace("(profissao b)", profib)
+    """.replace("(nome completo a)", nomea).replace("(nome completo b)", nomeb).replace("(naturalidade a)", natua).replace("(naturalidade b)", natub).replace("(profissao a)", profia).replace("(profissao b)", profib).replace("(identidade a)", identa) .replace("(identidade b)", identb).replace("(orgao a)", orga).replace("(orgao b)", orgb).replace("(data a)", dataa).replace("(data b)", datab).replace("(cpf a)", cpfa).replace("(cpf b)", cpfb).replace("(endereco a)", enda).replace("(endereco b)", endb).replace("(cidade a)", cidadea).replace("(cidade b)", cidadeb).replace("(estado a)", estadoa).replace("(estado b)", estadob)
 
     output = io.BytesIO()
     pisa_status = pisa.CreatePDF(html, dest=output)

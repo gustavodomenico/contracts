@@ -1,19 +1,108 @@
-<h1>
-    Dados do contrato
-</h1>
-<form method="post">
-  Nome completo A: <input name="nomea" value="GUSTAVO DI DOMENICO" oninput="this.value = this.value.toUpperCase()"/>
-  <br/><br/>
-  Naturalidade A: <input name="natua" value="BRASILEIRO" oninput="this.value = this.value.toUpperCase()"/>
-  <br/><br/>
-  Profissão A: <input name="profia" value="GERENTE" oninput="this.value = this.value.toUpperCase()"/>
-  <br/><br/>
-  <hr />
-  Nome completo B: <input name="nomeb" value="MELINA DERALDO" oninput="this.value = this.value.toUpperCase()"/>
-  <br/><br/>
-  Naturalidade B: <input name="natub" value="BRASILEIRA" oninput="this.value = this.value.toUpperCase()"/>
-  <br/><br/>
-  Profissão B: <input name="profib" value="DIRETORA" oninput="this.value = this.value.toUpperCase()"/>
-  <br/><br/>
-  <button type="submit">Submit</button>
-</form>
+<html>
+<head>
+    <style>
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Dados do contrato
+    </h1>
+    <form method="post">
+        <table border="1">
+            <tr>
+                <th> Pessoa A </th>
+                <th> Pessoa B </th>
+            </tr>
+            <tr>
+                <td>
+                    Nome completo A: <input name="nomea" value="GUSTAVO DI DOMENICO" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    Nome completo B: <input name="nomeb" value="MELINA DERALDO" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Naturalidade A: <input name="natua" value="BRASILEIRO" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+
+                <td>
+                    Naturalidade B: <input name="natub" value="BRASILEIRA" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Profissão A: <input name="profia" value="GERENTE TECNOLOGIA" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    Profissão B: <input name="profib" value="DIRETORA TECNOLOGIA" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Identidade A: <input name="identa" value="1111111111" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    Identidade B: <input name="identb" value="2222222222" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Orgão Expedidor A: <input name="orga" value="SJS" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    Orgão Expedidor B: <input name="orgb" value="SSP" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Data de Expedição A: <input name="dataa" value="02/03/2015" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    Data de Expedição B: <input name="datab" value="01/07/2011" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    CPF A: <input name="cpfa" value="999999999999" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    CPF B: <input name="cpfb" value="888888888888" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Endereço A: <input name="enda" value="RUA MARIO ANTUNES DE CUNHA, 511 - APT304B" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    Endereço B: <input name="endb" value="RUA TOCANTINS, 1120 - CASA 20" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cidade A: <input name="cidadea" value="PORTO ALEGRE" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    Cidade B: <input name="cidadeb" value="SALVADOR" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Estado A: <input name="estadoa" value="RS" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+                <td>
+                    Estado B: <input name="estadob" value="BH" oninput="this.value = this.value.toUpperCase()"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>                        
+        </table>
+    </form>
+</body>
+</html>
